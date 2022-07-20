@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content=" windth=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title> 🐶 Adopta 🐱‍👓  </title>
+    </head>
+    <body>
+        <header>
+            <i><h1>
+                ❤🐾  Formulario De Registro🐾❤ <h1></i>
+        </header>
+
+             <i><main>
+             <h3> Contesta lo siguientes datos </h3>
+       <hr></hr> </i>
+       <!--Fecha y Hora -->
+       <div  id="date" style="margin: 1rem;"></div>
+       <!-- Datos personales -->
+       <div>
+        <form action="" method="post" id='form' >
+            <center><fieldset >
+                <legend >1. DATOS PERSONALES </legend> 
+            
+            <h2 class="error" id="msj"></h2>
+            <label class="titulo" for="nombre"> *Nombre: </label>
+            <input type="text"  id="nombre" name="nombre"  required maxlength="45" /><br>
+
+            <h2 class="error" id="msj2"></h2><br>
+            <label class="titulo" for="apellido"> *Apellido: </label>
+            <input type="text" name="apellido" id="apellido" ><br>
+            
+            
+            <h2 class="error" id="msj3"></h2><br>
+            <label class="titulo" for="email"> *E-mail </label>
+            <input type="email" name="email" id="email" ><br>
+            
+            
+            <h2 class="error" id="msj4"></h2><br>
+            <label class="titulo" for="passw"> *Password </label>
+            <input  type="password" name="pasw" id="password" > <br>
+            
+            <h2 class="error" id="msj5"></h2><br>
+            <label class="titulo" for="edad"> Edad </label>
+            <input  type="number" name="edad" id="edad" > <br>
+            
+            <h2 class="error" id="msj6"></h2><br>
+            <label class="titulo"> Nivel de Estudios </label>
+            <label class="titulo"><input type="checkbox" name="Estudio" id="1" value="Técnico" >Técnico </label>
+            <label class="titulo"><input type="checkbox" name="Estudio" id="3" value="Profesional">Profesional </Label>
+            <label class="titulo"><input type="checkbox" name="Estudio" id="4" value="Posgrado"> Posgrado </Label>    <br>
+
+                <label class="titulo"> Sexo - - <select>
+                    <option value="seleccione"> Selecciones </option>
+                    <option value="Femenino"> Femenino </option>
+                    <option value="Masculino"> Masculino</option></select> <br>
+            </fieldset> <br>
+            <button type="submit"  class="boton">Enviar</button>
+            
+
+</form>
+
+    <script type="text/javascript">
+        const nombre = document.getElementById('nombre');
+        const apellido = document.getElementById('apellido');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const Edad = document.getElementById("edad")
+
+
+        const msj = document.getElementById('msj');
+        const msj2 = document.getElementById('msj2');
+        const msj3= document.getElementById('msj3');
+        const msj4 = document.getElementById('msj4');
+        const form = document.getElementById('form');
+
+        /* Fecha y hora */
+        document.getElementById("date").innerHTML = Date();
+
+form.addEventListener("submit", e=>{
+e.preventDefault();
+let regexEmail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+if(nombre ==="" || apellido ==="" || password==="" || email ===""|| edad===""){
+    alert("Todos los campos deben llenarse")
+    return false;
+}
+
+if (  nombre.value.length<2) {
+	msj.innerText="El nombre debe de ser mayor a 2 digitos"
+
+}
+if (  apellido.value.length<2) {
+    msj2.innerText="El apelido debe de ser mayor a 2 digitos"
+    return false;
+}
+
+if (!regexEmail.test(email.value)) {
+  msj3.innerText=" * El EMAIL no es correcto"
+
+}
+
+if (  password.value.length<8) {
+    msj4.innerText="El password debe ser mayor a 8 caracteres"
+
+}
+if (  Edad.value.length<2) {
+    msj5.innerText="Error de capo son dos numeros"
+
+}
+else{ 
+alert('Campos registrados')
+}
+})
+/* seleccion de la fecha */
+
+
+</script>
+        </script>
+    </body>
+</html>
+    

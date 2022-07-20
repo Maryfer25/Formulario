@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+html{
+    background-color: pink;
+}
+header{
+    background-color: #787af78f;
+    width: 100%;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Courier New';
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 25px; 
+}
+main{
+    background-color: #d0f3fdd2;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    margin: 1rem 9rem 1rem 25rem;
+    padding: 5rem;
+}
+h3{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    padding-top: 4px;
+}
+fieldset{
+    width: 835px;
+    text-align: left;
+}
+legend{
+    text-align: center;
+    background-color: #f8d9a9;
+    width: auto;
+    height: auto;
+}
+fieldset{
+    width: 350px;
+}
+.fechayhora{
+    text-align: right;
+}
+.boton{
+    background-color: pink;
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
+}
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New';
+}
+
+input{
+    width: 150px;
+    height: 20px;
+}
